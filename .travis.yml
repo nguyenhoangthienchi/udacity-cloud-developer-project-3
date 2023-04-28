@@ -6,12 +6,12 @@ before_install:
   - docker-compose -f docker-compose-build.yaml build --parallel
 
 script:
-  - docker tag udagram-api-feed jayesd3v/udagram-api-feed:v1
-  - docker tag udagram-api-user jayesd3v/udagram-api-user:v1
-  - docker tag udagram-frontend jayesd3v/udagram-frontend:v1
-  - docker tag reverseproxy jayesd3v/reverseproxy:v1
+  - docker tag udagram-api-feed jayesd3v/udagram-api-feed:v2
+  - docker tag udagram-api-user jayesd3v/udagram-api-user:v2
+  - docker tag udagram-frontend jayesd3v/udagram-frontend:v2
+  - docker tag reverseproxy jayesd3v/reverseproxy:v2
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-  - docker push jayesd3v/udagram-api-feed:v1
-  - docker push jayesd3v/udagram-api-user:v1
-  - docker push jayesd3v/udagram-frontend:v1
-  - docker push jayesd3v/reverseproxy:v1
+  - docker push jayesd3v/udagram-api-feed:v2
+  - docker push jayesd3v/udagram-api-user:v2
+  - docker push jayesd3v/udagram-frontend:v2
+  - docker push jayesd3v/reverseproxy:v2
