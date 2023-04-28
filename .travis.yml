@@ -1,17 +1,17 @@
 # Build
-- docker-compose -f docker-compose-build.yaml build --parallel
+  - docker-compose -f docker-compose-build.yaml build --parallel
 
 # Tagging
-- docker tag udagram-api-feed jayesd3v/udagram-api-feed:v1
-- docker tag udagram-api-user jayesd3v/udagram-api-feed:v1
-- docker tag udagram-frontend jayesd3v/udagram-frontend:v1
-- docker tag udagram-reverseproxy jayesd3v/udagram-reverseproxy:v1
+  - docker tag udagram-api-feed jayesd3v/udagram-api-feed:v1
+  - docker tag udagram-api-user jayesd3v/udagram-api-feed:v1
+  - docker tag udagram-frontend jayesd3v/udagram-frontend:v1
+  - docker tag udagram-reverseproxy jayesd3v/udagram-reverseproxy:v1
 
 
 # Push
 ```bash
-- echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-- docker push jayesd3v/udagram-api-feed:v1
-- docker push jayesd3v/udagram-api-feed:v1
-- docker push jayesd3v/udagram-frontend:v1
-- docker push jayesd3v/udagram-reverseproxy:v1
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+  - docker push jayesd3v/udagram-api-feed:v1
+  - docker push jayesd3v/udagram-api-feed:v1
+  - docker push jayesd3v/udagram-frontend:v1
+  - docker push jayesd3v/udagram-reverseproxy:v1
